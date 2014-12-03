@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_main_pre_center"
+        android:text=" "
+        android:layout_centerInParent="true" />
+    
+    <Button android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/txt_main_pre_center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btnForeGround"
+        android:layout_centerHorizontal="true"
+        android:text="訂單產生(幕前)" />
+    
+     <Button android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_main_pre_center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btnBackGround"
+        android:layout_centerHorizontal="true"
+        android:text="訂單產生(幕後)" />
+    
+</RelativeLayout>
