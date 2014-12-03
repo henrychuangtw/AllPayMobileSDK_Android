@@ -337,7 +337,16 @@ public class MainBackground extends Activity implements AllpayBackgroundTaskComp
 //				new AllpayAsyncTask<BackgroundCredit, API_Credit>(MainBackground.this, API_Credit.class).execute(oBackgroundCredit);
 
 			}else if(iBtnID == R.id.btnOTP){
-				BackgroundOTP oBackgroundOTP = new BackgroundOTP(OtpMerchantID, 
+				//************** ¨SPlatformID ******************
+//				BackgroundOTP oBackgroundOTP = new BackgroundOTP(OtpMerchantID, 
+//																 OtpMerchantTradeNo, 
+//																 OtpTradeNo, 
+//																 edtOTP.getText().toString(), 
+//																 ENVIRONMENT.STAGE);
+				
+				//************** ¦³PlatformID ******************
+				BackgroundOTP oBackgroundOTP = new BackgroundOTP(OtpMerchantID,
+																Config.PlatformID_test,
 																 OtpMerchantTradeNo, 
 																 OtpTradeNo, 
 																 edtOTP.getText().toString(), 

@@ -21,6 +21,12 @@ public class BackgroundOTP extends BackgroundBase {
 		this.OtpCode = OtpCode;
 		this.TradeNo = TradeNo;
 		
+	}public BackgroundOTP(String MerchantID, String PlatformID, String MerchantTradeNo, String TradeNo, String OtpCode, ENVIRONMENT Environment) {
+		super(MerchantID, "", MerchantTradeNo, "", 0, "", "", null, Environment, PlatformID);
+		// TODO Auto-generated constructor stub
+		this.OtpCode = OtpCode;
+		this.TradeNo = TradeNo;
+		
 	}
 	
 	
