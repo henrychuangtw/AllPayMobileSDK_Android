@@ -1,4 +1,4 @@
-package com.allpay.tw.mobilesdk.demo;
+﻿package com.allpay.tw.mobilesdk.demo;
 
 import android.app.Activity;
 import android.os.Bundle;

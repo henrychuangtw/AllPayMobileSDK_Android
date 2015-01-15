@@ -1,4 +1,4 @@
-package com.allpay.tw.mobilesdk.demo;
+ï»¿package com.allpay.tw.mobilesdk.demo;
 
 import com.allpay.tw.mobilesdk.API_ATM;
 import com.allpay.tw.mobilesdk.API_Base;
@@ -47,7 +47,7 @@ public class MainBackground extends Activity implements AllpayBackgroundTaskComp
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_background);
-		setTitle("­q³æ²£¥Í(¹õ«á)");
+		setTitle("è¨‚å–®ç”¢ç”Ÿ(å¹•å¾Œ)");
 		
 		btnATM = (Button)findViewById(R.id.btnBackgroundATM);
 		btnCVS = (Button)findViewById(R.id.btnBackgroundCVS);
@@ -80,8 +80,8 @@ public class MainBackground extends Activity implements AllpayBackgroundTaskComp
 		
 		
 		pd = new ProgressDialog(MainBackground.this);
-		pd.setTitle("´£¥Ü");
-		pd.setMessage("¥æ©ö³B²z¤¤");
+		pd.setTitle("æç¤º");
+		pd.setMessage("äº¤æ˜“è™•ç†ä¸­");
 	}
 	
 	
@@ -99,252 +99,252 @@ public class MainBackground extends Activity implements AllpayBackgroundTaskComp
 				else 
 					isCounterPayIN = false;
 				
-				//************** ¨SPlatformID ******************
-//				BackgroundATM oBackgroundATM = new BackgroundATM(Config.MerchantID_test, 			//¼t°Ó½s¸¹
-//																 Config.AppCode_test, 				//App¥N½X
-//																 Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-//																 Config.getMerchantTradeDate(), 	//¼t°Ó¥æ©ö®É¶¡
-//																 Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-//																 Config.TradeDesc_test, 			//¥æ©ö´y­z
-//																 Config.ItemName_test, 				//°Ó«~¦WºÙ
-//																 PAYMENTTYPE.ATM, 					//¥I´Ú¤è¦¡
-//																 ENVIRONMENT.STAGE, 				//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
-//																 bankName, 							//»È¦æ¥N½X
-//																 3);								//¿ï¾Ü©Ê°Ñ¼Æ¡A¤¹³\Ãº¶O¦³®Ä¤Ñ¼Æ(1~60)
+				//************** æ²’PlatformID ******************
+//				BackgroundATM oBackgroundATM = new BackgroundATM(Config.MerchantID_test, 			//å» å•†ç·¨è™Ÿ
+//																 Config.AppCode_test, 				//Appä»£ç¢¼
+//																 Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+//																 Config.getMerchantTradeDate(), 	//å» å•†äº¤æ˜“æ™‚é–“
+//																 Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+//																 Config.TradeDesc_test, 			//äº¤æ˜“æè¿°
+//																 Config.ItemName_test, 				//å•†å“åç¨±
+//																 PAYMENTTYPE.ATM, 					//ä»˜æ¬¾æ–¹å¼
+//																 ENVIRONMENT.STAGE, 				//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+//																 bankName, 							//éŠ€è¡Œä»£ç¢¼
+//																 3);								//é¸æ“‡æ€§åƒæ•¸ï¼Œå…è¨±ç¹³è²»æœ‰æ•ˆå¤©æ•¸(1~60)
 				
-				//************** ¦³PlatformID ******************
-//				BackgroundATM oBackgroundATM = new BackgroundATM(Config.MerchantID_test, 			//¼t°Ó½s¸¹
-//																 Config.PlatformID_test,			//¯S¬ù¦X§@¥­¥x°Ó¥N¸¹
-//																 Config.AppCode_PlatformID_test, 	//App¥N½X
-//																 Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-//																 Config.getMerchantTradeDate(), 	//¼t°Ó¥æ©ö®É¶¡
-//																 Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-//																 Config.TradeDesc_test, 			//¥æ©ö´y­z
-//																 Config.ItemName_test, 				//°Ó«~¦WºÙ
-//																 PAYMENTTYPE.ATM, 					//¥I´Ú¤è¦¡
-//																 ENVIRONMENT.STAGE, 				//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
-//																 BANKNAME.parse2BankName(spnATM.getSelectedItem().toString()), 				//»È¦æ¥N½X
+				//************** æœ‰PlatformID ******************
+//				BackgroundATM oBackgroundATM = new BackgroundATM(Config.MerchantID_test, 			//å» å•†ç·¨è™Ÿ
+//																 Config.PlatformID_test,			//ç‰¹ç´„åˆä½œå¹³å°å•†ä»£è™Ÿ
+//																 Config.AppCode_PlatformID_test, 	//Appä»£ç¢¼
+//																 Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+//																 Config.getMerchantTradeDate(), 	//å» å•†äº¤æ˜“æ™‚é–“
+//																 Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+//																 Config.TradeDesc_test, 			//äº¤æ˜“æè¿°
+//																 Config.ItemName_test, 				//å•†å“åç¨±
+//																 PAYMENTTYPE.ATM, 					//ä»˜æ¬¾æ–¹å¼
+//																 ENVIRONMENT.STAGE, 				//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+//																 BANKNAME.parse2BankName(spnATM.getSelectedItem().toString()), 				//éŠ€è¡Œä»£ç¢¼
 //																 3);
 				
-				//************** ¦³PlatformID¡B¤âÄò¶O ******************
-				BackgroundATM oBackgroundATM = new BackgroundATM(Config.MerchantID_test, 			//¼t°Ó½s¸¹
-																 Config.PlatformID_test,			//¯S¬ù¦X§@¥­¥x°Ó¥N¸¹
-																 Config.PlatformChargeFee_test,		//¯S¬ù¦X§@¥­¥x°Ó¤âÄò¶O
-																 Config.AppCode_PlatformID_test, 	//App¥N½X
-																 Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-																 Config.getMerchantTradeDate(), 	//¼t°Ó¥æ©ö®É¶¡
-																 Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-																 Config.TradeDesc_test, 			//¥æ©ö´y­z
-																 Config.ItemName_test, 				//°Ó«~¦WºÙ
-																 PAYMENTTYPE.ATM, 					//¥I´Ú¤è¦¡
-																 ENVIRONMENT.STAGE, 				//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
-																 BANKNAME.parse2BankName(spnATM.getSelectedItem().toString()), 				//»È¦æ¥N½X
+				//************** æœ‰PlatformIDã€æ‰‹çºŒè²» ******************
+				BackgroundATM oBackgroundATM = new BackgroundATM(Config.MerchantID_test, 			//å» å•†ç·¨è™Ÿ
+																 Config.PlatformID_test,			//ç‰¹ç´„åˆä½œå¹³å°å•†ä»£è™Ÿ
+																 Config.PlatformChargeFee_test,		//ç‰¹ç´„åˆä½œå¹³å°å•†æ‰‹çºŒè²»
+																 Config.AppCode_PlatformID_test, 	//Appä»£ç¢¼
+																 Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+																 Config.getMerchantTradeDate(), 	//å» å•†äº¤æ˜“æ™‚é–“
+																 Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+																 Config.TradeDesc_test, 			//äº¤æ˜“æè¿°
+																 Config.ItemName_test, 				//å•†å“åç¨±
+																 PAYMENTTYPE.ATM, 					//ä»˜æ¬¾æ–¹å¼
+																 ENVIRONMENT.STAGE, 				//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+																 BANKNAME.parse2BankName(spnATM.getSelectedItem().toString()), 				//éŠ€è¡Œä»£ç¢¼
 																 3);
 								
-				//¨Ï¥ÎProgressDialog
+				//ä½¿ç”¨ProgressDialog
 				new AllpayAsyncTask<BackgroundATM, API_ATM>(MainBackground.this, API_ATM.class, pd).execute(oBackgroundATM);
-				//¤£¨Ï¥ÎProgressDialog
+				//ä¸ä½¿ç”¨ProgressDialog
 //				new AllpayAsyncTask<BackgroundATM, API_ATM>(MainBackground.this, API_ATM.class).execute(oBackgroundATM);
 				
 			}else if(iBtnID == R.id.btnBackgroundCVS){
-				//************** ¨SPlatformID ******************
-//				BackgroundCVS oBackgroundCVS = new BackgroundCVS(Config.MerchantID_test, 			//¼t°Ó½s¸¹
-//																 Config.AppCode_test, 				//App¥N½X
-//																 Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-//																 Config.getMerchantTradeDate(), 	//¼t°Ó¥æ©ö®É¶¡
-//																 Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-//																 Config.TradeDesc_test, 			//¥æ©ö´y­z
-//																 Config.ItemName_test, 				//°Ó«~¦WºÙ
-//																 PAYMENTTYPE.CVS, 					//¥I´Ú¤è¦¡
-//																 ENVIRONMENT.STAGE, 				//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
-//																 STORETYPE.parse2StoreType(spnCVS.getSelectedItem().toString()),					//¶W°Ó¥N½X
-//																 "´ú¸Õ1", 							//¥æ©ö´y­z1
-//																 "´ú¸Õ2");
+				//************** æ²’PlatformID ******************
+//				BackgroundCVS oBackgroundCVS = new BackgroundCVS(Config.MerchantID_test, 			//å» å•†ç·¨è™Ÿ
+//																 Config.AppCode_test, 				//Appä»£ç¢¼
+//																 Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+//																 Config.getMerchantTradeDate(), 	//å» å•†äº¤æ˜“æ™‚é–“
+//																 Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+//																 Config.TradeDesc_test, 			//äº¤æ˜“æè¿°
+//																 Config.ItemName_test, 				//å•†å“åç¨±
+//																 PAYMENTTYPE.CVS, 					//ä»˜æ¬¾æ–¹å¼
+//																 ENVIRONMENT.STAGE, 				//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+//																 STORETYPE.parse2StoreType(spnCVS.getSelectedItem().toString()),					//è¶…å•†ä»£ç¢¼
+//																 "æ¸¬è©¦1", 							//äº¤æ˜“æè¿°1
+//																 "æ¸¬è©¦2");
 				
-				//************** ¦³PlatformID ******************
-//				BackgroundCVS oBackgroundCVS = new BackgroundCVS(Config.MerchantID_test, 			//¼t°Ó½s¸¹
-//																 Config.PlatformID_test,			//¯S¬ù¦X§@¥­¥x°Ó¥N¸¹
-//																 Config.AppCode_PlatformID_test, 	//App¥N½X
-//																 Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-//																 Config.getMerchantTradeDate(), 	//¼t°Ó¥æ©ö®É¶¡
-//																 Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-//																 Config.TradeDesc_test, 			//¥æ©ö´y­z
-//																 Config.ItemName_test, 				//°Ó«~¦WºÙ
-//																 PAYMENTTYPE.CVS, 					//¥I´Ú¤è¦¡
-//																 ENVIRONMENT.STAGE, 				//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
-//																 STORETYPE.parse2StoreType(spnCVS.getSelectedItem().toString()),					//¶W°Ó¥N½X
-//																 "´ú¸Õ1", 							//¥æ©ö´y­z1
-//																 "´ú¸Õ2");
+				//************** æœ‰PlatformID ******************
+//				BackgroundCVS oBackgroundCVS = new BackgroundCVS(Config.MerchantID_test, 			//å» å•†ç·¨è™Ÿ
+//																 Config.PlatformID_test,			//ç‰¹ç´„åˆä½œå¹³å°å•†ä»£è™Ÿ
+//																 Config.AppCode_PlatformID_test, 	//Appä»£ç¢¼
+//																 Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+//																 Config.getMerchantTradeDate(), 	//å» å•†äº¤æ˜“æ™‚é–“
+//																 Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+//																 Config.TradeDesc_test, 			//äº¤æ˜“æè¿°
+//																 Config.ItemName_test, 				//å•†å“åç¨±
+//																 PAYMENTTYPE.CVS, 					//ä»˜æ¬¾æ–¹å¼
+//																 ENVIRONMENT.STAGE, 				//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+//																 STORETYPE.parse2StoreType(spnCVS.getSelectedItem().toString()),					//è¶…å•†ä»£ç¢¼
+//																 "æ¸¬è©¦1", 							//äº¤æ˜“æè¿°1
+//																 "æ¸¬è©¦2");
 				
-				//************** ¦³PlatformID¡B¤âÄò¶O ******************
-				BackgroundCVS oBackgroundCVS = new BackgroundCVS(Config.MerchantID_test, 			//¼t°Ó½s¸¹
-																 Config.PlatformID_test,			//¯S¬ù¦X§@¥­¥x°Ó¥N¸¹
-																 Config.PlatformChargeFee_test,		//¯S¬ù¦X§@¥­¥x°Ó¤âÄò¶O
-																 Config.AppCode_PlatformID_test, 	//App¥N½X
-																 Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-																 Config.getMerchantTradeDate(), 	//¼t°Ó¥æ©ö®É¶¡
-																 Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-																 Config.TradeDesc_test, 			//¥æ©ö´y­z
-																 Config.ItemName_test, 				//°Ó«~¦WºÙ
-																 PAYMENTTYPE.CVS, 					//¥I´Ú¤è¦¡
-																 ENVIRONMENT.STAGE, 				//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
-																 STORETYPE.parse2StoreType(spnCVS.getSelectedItem().toString()),					//¶W°Ó¥N½X
-																 "´ú¸Õ1", 							//¥æ©ö´y­z1
-																 "´ú¸Õ2");
+				//************** æœ‰PlatformIDã€æ‰‹çºŒè²» ******************
+				BackgroundCVS oBackgroundCVS = new BackgroundCVS(Config.MerchantID_test, 			//å» å•†ç·¨è™Ÿ
+																 Config.PlatformID_test,			//ç‰¹ç´„åˆä½œå¹³å°å•†ä»£è™Ÿ
+																 Config.PlatformChargeFee_test,		//ç‰¹ç´„åˆä½œå¹³å°å•†æ‰‹çºŒè²»
+																 Config.AppCode_PlatformID_test, 	//Appä»£ç¢¼
+																 Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+																 Config.getMerchantTradeDate(), 	//å» å•†äº¤æ˜“æ™‚é–“
+																 Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+																 Config.TradeDesc_test, 			//äº¤æ˜“æè¿°
+																 Config.ItemName_test, 				//å•†å“åç¨±
+																 PAYMENTTYPE.CVS, 					//ä»˜æ¬¾æ–¹å¼
+																 ENVIRONMENT.STAGE, 				//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+																 STORETYPE.parse2StoreType(spnCVS.getSelectedItem().toString()),					//è¶…å•†ä»£ç¢¼
+																 "æ¸¬è©¦1", 							//äº¤æ˜“æè¿°1
+																 "æ¸¬è©¦2");
 				
-				//¨Ï¥ÎProgressDialog
+				//ä½¿ç”¨ProgressDialog
 				new AllpayAsyncTask<BackgroundCVS, API_CVS>(MainBackground.this, API_CVS.class, pd).execute(oBackgroundCVS);
-				//¤£¨Ï¥ÎProgressDialog
+				//ä¸ä½¿ç”¨ProgressDialog
 //				new AllpayAsyncTask<BackgroundCVS, API_CVS>(MainBackground.this, API_CVS.class).execute(oBackgroundCVS);
 				
 			}else if(iBtnID == R.id.btnBackgroundCredit){
 				String PhoneNumber = edtCreditPhone.getText().toString();
 				if(!PhoneNumber.matches("[0][9][0-9]{2}[0-9]{6}")){
-					Toast.makeText(MainBackground.this, "½Ğ¿é¤J¥¿½Tªº¤â¾÷¸¹½X", Toast.LENGTH_SHORT).show();
+					Toast.makeText(MainBackground.this, "è«‹è¼¸å…¥æ­£ç¢ºçš„æ‰‹æ©Ÿè™Ÿç¢¼", Toast.LENGTH_SHORT).show();
 					return;
 				}
 				
-				//************** ¨SPlatformID ******************
-//				BackgroundCredit oBackgroundCredit = new BackgroundCredit(Config.MerchantID_test, 			//¼t°Ó½s¸¹ 
-//																		  Config.AppCode_test, 				//App¥N½X 
-//																		  Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-//																		  Config.getMerchantTradeDate(), 	//¼t°Ó¥æ©ö®É¶¡
-//																		  Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-//																		  Config.TradeDesc_test, 			//¥æ©ö´y­z
-//																		  Config.ItemName_test, 			//°Ó«~¦WºÙ
-//																		  PAYMENTTYPE.CREDIT, 				//¥I´Ú¤è¦¡
-//																		  ENVIRONMENT.STAGE, 				//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
-//																		  "¦ë§Q", 							//«ù¥d¤H©m¦W
-//																		  PhoneNumber, 						//¤â¾÷¸¹½X
-//																		  "4311952222222222", 				//«H¥Î¥d¥d¸¹
-//																		  "204012", 						//¦³®Ä¦~¤ë
-//																		  "222");							//¥d¤ù¥½¤T½X
+				//************** æ²’PlatformID ******************
+//				BackgroundCredit oBackgroundCredit = new BackgroundCredit(Config.MerchantID_test, 			//å» å•†ç·¨è™Ÿ 
+//																		  Config.AppCode_test, 				//Appä»£ç¢¼ 
+//																		  Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+//																		  Config.getMerchantTradeDate(), 	//å» å•†äº¤æ˜“æ™‚é–“
+//																		  Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+//																		  Config.TradeDesc_test, 			//äº¤æ˜“æè¿°
+//																		  Config.ItemName_test, 			//å•†å“åç¨±
+//																		  PAYMENTTYPE.CREDIT, 				//ä»˜æ¬¾æ–¹å¼
+//																		  ENVIRONMENT.STAGE, 				//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+//																		  "äº¨åˆ©", 							//æŒå¡äººå§“å
+//																		  PhoneNumber, 						//æ‰‹æ©Ÿè™Ÿç¢¼
+//																		  "4311952222222222", 				//ä¿¡ç”¨å¡å¡è™Ÿ
+//																		  "204012", 						//æœ‰æ•ˆå¹´æœˆ
+//																		  "222");							//å¡ç‰‡æœ«ä¸‰ç¢¼
 				
-				//************** ¦³PlatformID ******************
-//				BackgroundCredit oBackgroundCredit = new BackgroundCredit(Config.MerchantID_test, 			//¼t°Ó½s¸¹ 
-//																		  Config.PlatformID_test,			//¯S¬ù¦X§@¥­¥x°Ó¥N¸¹
-//																		  Config.AppCode_PlatformID_test, 	//App¥N½X 
-//																		  Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-//																		  Config.getMerchantTradeDate(), 	//¼t°Ó¥æ©ö®É¶¡
-//																		  Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-//																		  Config.TradeDesc_test, 			//¥æ©ö´y­z
-//																		  Config.ItemName_test, 			//°Ó«~¦WºÙ
-//																		  PAYMENTTYPE.CREDIT, 				//¥I´Ú¤è¦¡
-//																		  ENVIRONMENT.STAGE, 				//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
-//																		  "¦ë§Q", 							//«ù¥d¤H©m¦W
-//																		  PhoneNumber, 						//¤â¾÷¸¹½X
-//																		  "4311952222222222", 				//«H¥Î¥d¥d¸¹
-//																		  "204012", 						//¦³®Ä¦~¤ë
-//																		  "222");							//¥d¤ù¥½¤T½X
+				//************** æœ‰PlatformID ******************
+//				BackgroundCredit oBackgroundCredit = new BackgroundCredit(Config.MerchantID_test, 			//å» å•†ç·¨è™Ÿ 
+//																		  Config.PlatformID_test,			//ç‰¹ç´„åˆä½œå¹³å°å•†ä»£è™Ÿ
+//																		  Config.AppCode_PlatformID_test, 	//Appä»£ç¢¼ 
+//																		  Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+//																		  Config.getMerchantTradeDate(), 	//å» å•†äº¤æ˜“æ™‚é–“
+//																		  Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+//																		  Config.TradeDesc_test, 			//äº¤æ˜“æè¿°
+//																		  Config.ItemName_test, 			//å•†å“åç¨±
+//																		  PAYMENTTYPE.CREDIT, 				//ä»˜æ¬¾æ–¹å¼
+//																		  ENVIRONMENT.STAGE, 				//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+//																		  "äº¨åˆ©", 							//æŒå¡äººå§“å
+//																		  PhoneNumber, 						//æ‰‹æ©Ÿè™Ÿç¢¼
+//																		  "4311952222222222", 				//ä¿¡ç”¨å¡å¡è™Ÿ
+//																		  "204012", 						//æœ‰æ•ˆå¹´æœˆ
+//																		  "222");							//å¡ç‰‡æœ«ä¸‰ç¢¼
 				
-				//************** ¦³PlatformID¡B¤âÄò¶O ******************
-				BackgroundCredit oBackgroundCredit = new BackgroundCredit(Config.MerchantID_test, 			//¼t°Ó½s¸¹ 
-																		  Config.PlatformID_test,			//¯S¬ù¦X§@¥­¥x°Ó¥N¸¹
-																		  Config.PlatformChargeFee_test,	//¯S¬ù¦X§@¥­¥x°Ó¤âÄò¶O
-																		  Config.AppCode_PlatformID_test, 	//App¥N½X 
-																		  Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-																		  Config.getMerchantTradeDate(), 	//¼t°Ó¥æ©ö®É¶¡
-																		  Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-																		  Config.TradeDesc_test, 			//¥æ©ö´y­z
-																		  Config.ItemName_test, 			//°Ó«~¦WºÙ
-																		  PAYMENTTYPE.CREDIT, 				//¥I´Ú¤è¦¡
-																		  ENVIRONMENT.STAGE, 				//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
-																		  "¦ë§Q", 							//«ù¥d¤H©m¦W
-																		  PhoneNumber, 						//¤â¾÷¸¹½X
-																		  "4311952222222222", 				//«H¥Î¥d¥d¸¹
-																		  "204012", 						//¦³®Ä¦~¤ë
-																		  "222");							//¥d¤ù¥½¤T½X
+				//************** æœ‰PlatformIDã€æ‰‹çºŒè²» ******************
+				BackgroundCredit oBackgroundCredit = new BackgroundCredit(Config.MerchantID_test, 			//å» å•†ç·¨è™Ÿ 
+																		  Config.PlatformID_test,			//ç‰¹ç´„åˆä½œå¹³å°å•†ä»£è™Ÿ
+																		  Config.PlatformChargeFee_test,	//ç‰¹ç´„åˆä½œå¹³å°å•†æ‰‹çºŒè²»
+																		  Config.AppCode_PlatformID_test, 	//Appä»£ç¢¼ 
+																		  Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+																		  Config.getMerchantTradeDate(), 	//å» å•†äº¤æ˜“æ™‚é–“
+																		  Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+																		  Config.TradeDesc_test, 			//äº¤æ˜“æè¿°
+																		  Config.ItemName_test, 			//å•†å“åç¨±
+																		  PAYMENTTYPE.CREDIT, 				//ä»˜æ¬¾æ–¹å¼
+																		  ENVIRONMENT.STAGE, 				//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+																		  "äº¨åˆ©", 							//æŒå¡äººå§“å
+																		  PhoneNumber, 						//æ‰‹æ©Ÿè™Ÿç¢¼
+																		  "4311952222222222", 				//ä¿¡ç”¨å¡å¡è™Ÿ
+																		  "204012", 						//æœ‰æ•ˆå¹´æœˆ
+																		  "222");							//å¡ç‰‡æœ«ä¸‰ç¢¼
 				
-				//¨Ï¥ÎProgressDialog
+				//ä½¿ç”¨ProgressDialog
 				new AllpayAsyncTask<BackgroundCredit, API_Credit>(MainBackground.this, API_Credit.class, pd).execute(oBackgroundCredit);
-				//¤£¨Ï¥ÎProgressDialog
+				//ä¸ä½¿ç”¨ProgressDialog
 //				new AllpayAsyncTask<BackgroundCredit, API_Credit>(MainBackground.this, API_Credit.class).execute(oBackgroundCredit);
 				
 			}else if(iBtnID == R.id.btnBackgroundCreditInstallment){
 				String PhoneNumber = edtCreditInstallmentPhone.getText().toString();
 				if(!PhoneNumber.matches("[0][9][0-9]{2}[0-9]{6}")){
-					Toast.makeText(MainBackground.this, "½Ğ¿é¤J¥¿½Tªº¤â¾÷¸¹½X", Toast.LENGTH_SHORT).show();
+					Toast.makeText(MainBackground.this, "è«‹è¼¸å…¥æ­£ç¢ºçš„æ‰‹æ©Ÿè™Ÿç¢¼", Toast.LENGTH_SHORT).show();
 					return;
 				}
 				
-				//************** ¨SPlatformID ******************
+				//************** æ²’PlatformID ******************
 //				BackgroundCredit oBackgroundCredit = new BackgroundCredit(
-//						  Config.MerchantID_test, 			//¼t°Ó½s¸¹ 
-//						  Config.AppCode_test, 				//App¥N½X 
-//						  Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-//						  Config.getMerchantTradeDate(), 	//¼t°Ó¥æ©ö®É¶¡
-//						  Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-//						  Config.TradeDesc_test, 			//¥æ©ö´y­z
-//						  Config.ItemName_test, 			//°Ó«~¦WºÙ
-//						  PAYMENTTYPE.CREDIT, 				//¥I´Ú¤è¦¡
-//						  ENVIRONMENT.STAGE, 				//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
-//						  "¦ë§Q", 							//«ù¥d¤H©m¦W
-//						  PhoneNumber, 						//¤â¾÷¸¹½X
-//						  "4311952222222222", 				//«H¥Î¥d¥d¸¹
-//						  "204012", 						//¦³®Ä¦~¤ë
-//						  "222",							//¥d¤ù¥½¤T½X
-//						  3,								//¤À´Á´Á¼Æ
-//						  0,								//¤À´Áªº¥I´Úª÷ÃB
-//						  false);							//¬O§_¨Ï¥Î¬õ§Q§é©è
+//						  Config.MerchantID_test, 			//å» å•†ç·¨è™Ÿ 
+//						  Config.AppCode_test, 				//Appä»£ç¢¼ 
+//						  Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+//						  Config.getMerchantTradeDate(), 	//å» å•†äº¤æ˜“æ™‚é–“
+//						  Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+//						  Config.TradeDesc_test, 			//äº¤æ˜“æè¿°
+//						  Config.ItemName_test, 			//å•†å“åç¨±
+//						  PAYMENTTYPE.CREDIT, 				//ä»˜æ¬¾æ–¹å¼
+//						  ENVIRONMENT.STAGE, 				//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+//						  "äº¨åˆ©", 							//æŒå¡äººå§“å
+//						  PhoneNumber, 						//æ‰‹æ©Ÿè™Ÿç¢¼
+//						  "4311952222222222", 				//ä¿¡ç”¨å¡å¡è™Ÿ
+//						  "204012", 						//æœ‰æ•ˆå¹´æœˆ
+//						  "222",							//å¡ç‰‡æœ«ä¸‰ç¢¼
+//						  3,								//åˆ†æœŸæœŸæ•¸
+//						  0,								//åˆ†æœŸçš„ä»˜æ¬¾é‡‘é¡
+//						  false);							//æ˜¯å¦ä½¿ç”¨ç´…åˆ©æŠ˜æŠµ
 				
-				//************** ¦³PlatformID ******************
+				//************** æœ‰PlatformID ******************
 //				BackgroundCredit oBackgroundCredit = new BackgroundCredit(
-//						  Config.MerchantID_test, 			//¼t°Ó½s¸¹
-//						  Config.PlatformID_test,			//¯S¬ù¦X§@¥­¥x°Ó¥N¸¹
-//						  Config.AppCode_PlatformID_test, 	//App¥N½X 
-//						  Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-//						  Config.getMerchantTradeDate(), 	//¼t°Ó¥æ©ö®É¶¡
-//						  Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-//						  Config.TradeDesc_test, 			//¥æ©ö´y­z
-//						  Config.ItemName_test, 			//°Ó«~¦WºÙ
-//						  PAYMENTTYPE.CREDIT, 				//¥I´Ú¤è¦¡
-//						  ENVIRONMENT.STAGE, 				//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
-//						  "¦ë§Q", 							//«ù¥d¤H©m¦W
-//						  PhoneNumber, 						//¤â¾÷¸¹½X
-//						  "4311952222222222", 				//«H¥Î¥d¥d¸¹
-//						  "204012", 						//¦³®Ä¦~¤ë
-//						  "222",							//¥d¤ù¥½¤T½X
-//						  3,								//¤À´Á´Á¼Æ
-//						  0,								//¤À´Áªº¥I´Úª÷ÃB
-//						  false);							//¬O§_¨Ï¥Î¬õ§Q§é©è
+//						  Config.MerchantID_test, 			//å» å•†ç·¨è™Ÿ
+//						  Config.PlatformID_test,			//ç‰¹ç´„åˆä½œå¹³å°å•†ä»£è™Ÿ
+//						  Config.AppCode_PlatformID_test, 	//Appä»£ç¢¼ 
+//						  Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+//						  Config.getMerchantTradeDate(), 	//å» å•†äº¤æ˜“æ™‚é–“
+//						  Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+//						  Config.TradeDesc_test, 			//äº¤æ˜“æè¿°
+//						  Config.ItemName_test, 			//å•†å“åç¨±
+//						  PAYMENTTYPE.CREDIT, 				//ä»˜æ¬¾æ–¹å¼
+//						  ENVIRONMENT.STAGE, 				//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+//						  "äº¨åˆ©", 							//æŒå¡äººå§“å
+//						  PhoneNumber, 						//æ‰‹æ©Ÿè™Ÿç¢¼
+//						  "4311952222222222", 				//ä¿¡ç”¨å¡å¡è™Ÿ
+//						  "204012", 						//æœ‰æ•ˆå¹´æœˆ
+//						  "222",							//å¡ç‰‡æœ«ä¸‰ç¢¼
+//						  3,								//åˆ†æœŸæœŸæ•¸
+//						  0,								//åˆ†æœŸçš„ä»˜æ¬¾é‡‘é¡
+//						  false);							//æ˜¯å¦ä½¿ç”¨ç´…åˆ©æŠ˜æŠµ
 				
-				//************** ¦³PlatformID¡B¤âÄò¶O ******************
+				//************** æœ‰PlatformIDã€æ‰‹çºŒè²» ******************
 				BackgroundCredit oBackgroundCredit = new BackgroundCredit(
-						  Config.MerchantID_test, 			//¼t°Ó½s¸¹
-						  Config.PlatformID_test,			//¯S¬ù¦X§@¥­¥x°Ó¥N¸¹
-						  Config.PlatformChargeFee_test,	//¯S¬ù¦X§@¥­¥x°Ó¤âÄò¶O
-						  Config.AppCode_PlatformID_test, 	//App¥N½X 
-						  Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-						  Config.getMerchantTradeDate(), 	//¼t°Ó¥æ©ö®É¶¡
-						  Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-						  Config.TradeDesc_test, 			//¥æ©ö´y­z
-						  Config.ItemName_test, 			//°Ó«~¦WºÙ
-						  PAYMENTTYPE.CREDIT, 				//¥I´Ú¤è¦¡
-						  ENVIRONMENT.STAGE, 				//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
-						  "¦ë§Q", 							//«ù¥d¤H©m¦W
-						  PhoneNumber, 						//¤â¾÷¸¹½X
-						  "4311952222222222", 				//«H¥Î¥d¥d¸¹
-						  "204012", 						//¦³®Ä¦~¤ë
-						  "222",							//¥d¤ù¥½¤T½X
-						  3,								//¤À´Á´Á¼Æ
-						  0,								//¤À´Áªº¥I´Úª÷ÃB
-						  false);							//¬O§_¨Ï¥Î¬õ§Q§é©è
+						  Config.MerchantID_test, 			//å» å•†ç·¨è™Ÿ
+						  Config.PlatformID_test,			//ç‰¹ç´„åˆä½œå¹³å°å•†ä»£è™Ÿ
+						  Config.PlatformChargeFee_test,	//ç‰¹ç´„åˆä½œå¹³å°å•†æ‰‹çºŒè²»
+						  Config.AppCode_PlatformID_test, 	//Appä»£ç¢¼ 
+						  Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+						  Config.getMerchantTradeDate(), 	//å» å•†äº¤æ˜“æ™‚é–“
+						  Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+						  Config.TradeDesc_test, 			//äº¤æ˜“æè¿°
+						  Config.ItemName_test, 			//å•†å“åç¨±
+						  PAYMENTTYPE.CREDIT, 				//ä»˜æ¬¾æ–¹å¼
+						  ENVIRONMENT.STAGE, 				//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+						  "äº¨åˆ©", 							//æŒå¡äººå§“å
+						  PhoneNumber, 						//æ‰‹æ©Ÿè™Ÿç¢¼
+						  "4311952222222222", 				//ä¿¡ç”¨å¡å¡è™Ÿ
+						  "204012", 						//æœ‰æ•ˆå¹´æœˆ
+						  "222",							//å¡ç‰‡æœ«ä¸‰ç¢¼
+						  3,								//åˆ†æœŸæœŸæ•¸
+						  0,								//åˆ†æœŸçš„ä»˜æ¬¾é‡‘é¡
+						  false);							//æ˜¯å¦ä½¿ç”¨ç´…åˆ©æŠ˜æŠµ
 				
 				
-				//¨Ï¥ÎProgressDialog
+				//ä½¿ç”¨ProgressDialog
 				new AllpayAsyncTask<BackgroundCredit, API_Credit>(MainBackground.this, API_Credit.class, pd).execute(oBackgroundCredit);
-				//¤£¨Ï¥ÎProgressDialog
+				//ä¸ä½¿ç”¨ProgressDialog
 //				new AllpayAsyncTask<BackgroundCredit, API_Credit>(MainBackground.this, API_Credit.class).execute(oBackgroundCredit);
 
 			}else if(iBtnID == R.id.btnOTP){
-				//************** ¨SPlatformID ******************
+				//************** æ²’PlatformID ******************
 //				BackgroundOTP oBackgroundOTP = new BackgroundOTP(OtpMerchantID, 
 //																 OtpMerchantTradeNo, 
 //																 OtpTradeNo, 
 //																 edtOTP.getText().toString(), 
 //																 ENVIRONMENT.STAGE);
 				
-				//************** ¦³PlatformID ******************
+				//************** æœ‰PlatformID ******************
 				BackgroundOTP oBackgroundOTP = new BackgroundOTP(OtpMerchantID,
 																Config.PlatformID_test,
 																 OtpMerchantTradeNo, 
@@ -352,9 +352,9 @@ public class MainBackground extends Activity implements AllpayBackgroundTaskComp
 																 edtOTP.getText().toString(), 
 																 ENVIRONMENT.STAGE);
 				
-				//¨Ï¥ÎProgressDialog
+				//ä½¿ç”¨ProgressDialog
 				new AllpayAsyncTask<BackgroundOTP, API_Credit>(MainBackground.this, API_Credit.class, pd).execute(oBackgroundOTP);
-				//¤£¨Ï¥ÎProgressDialog
+				//ä¸ä½¿ç”¨ProgressDialog
 //				new AllpayAsyncTask<BackgroundOTP, API_Credit>(MainBackground.this, API_Credit.class).execute(oBackgroundOTP);
 				
 			}
@@ -381,19 +381,19 @@ public class MainBackground extends Activity implements AllpayBackgroundTaskComp
 		// TODO Auto-generated method stub
 		String sResult = "";
 		
-		if(oApi_Base.RtnCode == 2){//ATM ¨ú¸¹¦¨¥\ or Á{ÂdÃº´Ú	
+		if(oApi_Base.RtnCode == 2){//ATM å–è™ŸæˆåŠŸ or è‡¨æ«ƒç¹³æ¬¾	
 			API_ATM oApi_ATM = (API_ATM)oApi_Base;
 			if(isCounterPayIN){
-				sResult = "Á{ÂdÃº´Ú\n\n" + oApi_ATM.toString();
+				sResult = "è‡¨æ«ƒç¹³æ¬¾\n\n" + oApi_ATM.toString();
 			}else{
-				sResult = "ATM ¨ú¸¹¦¨¥\\n\n" + oApi_ATM.toString();
+				sResult = "ATM å–è™ŸæˆåŠŸ\n\n" + oApi_ATM.toString();
 			}
 						
-		}else if(oApi_Base.RtnCode == 10100073){//¶W°Ó¨ú¸¹¦¨¥\
+		}else if(oApi_Base.RtnCode == 10100073){//è¶…å•†å–è™ŸæˆåŠŸ
 			API_CVS oApi_CVS = (API_CVS)oApi_Base;
-			sResult = "CVS ¨ú¸¹¦¨¥\\n\n" + oApi_CVS.toString();
+			sResult = "CVS å–è™ŸæˆåŠŸ\n\n" + oApi_CVS.toString();
 			
-		}else if(oApi_Base.RtnCode == 3){//«H¥Î¥dOTPÅçÃÒ
+		}else if(oApi_Base.RtnCode == 3){//ä¿¡ç”¨å¡OTPé©—è­‰
 			edtOTP.setText("");
 			layoutOTP.setVisibility(View.VISIBLE);
 			layoutMenu.setVisibility(View.GONE);		
@@ -402,18 +402,18 @@ public class MainBackground extends Activity implements AllpayBackgroundTaskComp
 			OtpMerchantID = oApi_Credit.MerchantID;
 			OtpMerchantTradeNo = oApi_Credit.MerchantTradeNo;
 			OtpTradeNo = oApi_Credit.TradeNo;
-			txtOtpExpiredTime.setText("ÅçÃÒ½X¨ì´Á®É¶¡¡G" + oApi_Credit.OtpExpiredTime);						
+			txtOtpExpiredTime.setText("é©—è­‰ç¢¼åˆ°æœŸæ™‚é–“ï¼š" + oApi_Credit.OtpExpiredTime);						
 			return;
 			
-		}else if(oApi_Base.RtnCode == 10000030){//ÅçÃÒ½X¿ù»~¡A½Ğ¦A¿é¤J¤@¦¸
+		}else if(oApi_Base.RtnCode == 10000030){//é©—è­‰ç¢¼éŒ¯èª¤ï¼Œè«‹å†è¼¸å…¥ä¸€æ¬¡
 			Toast.makeText(MainBackground.this, oApi_Base.RtnMsg, Toast.LENGTH_SHORT).show();
 			edtOTP.setText("");
 			
 			return;
 			
-		}else if(oApi_Base.RtnCode == 1){//«H¥Î¥d¥I´Ú¦¨¥\		
+		}else if(oApi_Base.RtnCode == 1){//ä¿¡ç”¨å¡ä»˜æ¬¾æˆåŠŸ		
 			API_Credit oApi_Credit = (API_Credit)oApi_Base;
-			sResult = "Credit ¥I´Ú¦¨¥\\n\n" + oApi_Credit.toString();
+			sResult = "Credit ä»˜æ¬¾æˆåŠŸ\n\n" + oApi_Credit.toString();
 			
 		}else{			
 			sResult = oApi_Base.toString();

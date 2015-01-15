@@ -1,4 +1,4 @@
-package com.allpay.tw.mobilesdk;
+ï»¿package com.allpay.tw.mobilesdk;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -27,12 +27,12 @@ public class OptionalCreditInstallment implements Parcelable {
 	
 	
 	/**
-	 * ¿ï¾Ü©Ê°Ñ¼Æ¡A«H¥Î¥d¤À´Á
-	 * ·íChoosePayment°Ñ¼Æ¬°Credit®É±a¤J¡A¤£¥i»P«H¥Î¥d©w´Á©wÃB¤@°_³]©w
-	 * @param CreditInstallment : ¨ê¥d¤À´Á´Á¼Æ
-	 * @param InstallmentAmount : ¨Ï¥Î¨ê¥d¤À´Áªº¥I´Úª÷ÃB
-	 * @param Redeem : «H¥Î¥d¬O§_¨Ï¥Î¬õ§Q§é©è
-	 * @param UnionPay : ¬O§_¬°»ÈÁp¥d¥æ©ö
+	 * é¸æ“‡æ€§åƒæ•¸ï¼Œä¿¡ç”¨å¡åˆ†æœŸ
+	 * ç•¶ChoosePaymentåƒæ•¸ç‚ºCreditæ™‚å¸¶å…¥ï¼Œä¸å¯èˆ‡ä¿¡ç”¨å¡å®šæœŸå®šé¡ä¸€èµ·è¨­å®š
+	 * @param CreditInstallment : åˆ·å¡åˆ†æœŸæœŸæ•¸
+	 * @param InstallmentAmount : ä½¿ç”¨åˆ·å¡åˆ†æœŸçš„ä»˜æ¬¾é‡‘é¡
+	 * @param Redeem : ä¿¡ç”¨å¡æ˜¯å¦ä½¿ç”¨ç´…åˆ©æŠ˜æŠµ
+	 * @param UnionPay : æ˜¯å¦ç‚ºéŠ€è¯å¡äº¤æ˜“
 	 */
 	public OptionalCreditInstallment(Integer CreditInstallment, Integer InstallmentAmount, Boolean Redeem, Boolean UnionPay){
 		this.CreditInstallment = CreditInstallment;

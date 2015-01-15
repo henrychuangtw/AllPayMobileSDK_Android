@@ -1,4 +1,4 @@
-package com.allpay.tw.mobilesdk;
+ï»¿package com.allpay.tw.mobilesdk;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -31,12 +31,12 @@ public class OptionalCVS implements Parcelable {
 	
 	
 	/**
-	 * ¿ï¾Ü©Ê°Ñ¼Æ¡A·íChoosePayment°Ñ¼Æ¬°CVS®É±a¤J
-	 * @param Desc_1 : ¥æ©ö´y­z1¡A·|¥X²{¦b¶W°ÓÃº¶O¥­¥x¿Ã¹õ¤W
-	 * @param Desc_2 : ¥æ©ö´y­z2¡A·|¥X²{¦b¶W°ÓÃº¶O¥­¥x¿Ã¹õ¤W
-	 * @param Desc_3 : ¥æ©ö´y­z3¡A·|¥X²{¦b¶W°ÓÃº¶O¥­¥x¿Ã¹õ¤W
-	 * @param Desc_4 : ¥æ©ö´y­z4¡A·|¥X²{¦b¶W°ÓÃº¶O¥­¥x¿Ã¹õ¤W
-	 * @param StoreType : ¥I´Ú¤l¶µ¥Ø¡A¶W°Ó
+	 * é¸æ“‡æ€§åƒæ•¸ï¼Œç•¶ChoosePaymentåƒæ•¸ç‚ºCVSæ™‚å¸¶å…¥
+	 * @param Desc_1 : äº¤æ˜“æè¿°1ï¼Œæœƒå‡ºç¾åœ¨è¶…å•†ç¹³è²»å¹³å°è¢å¹•ä¸Š
+	 * @param Desc_2 : äº¤æ˜“æè¿°2ï¼Œæœƒå‡ºç¾åœ¨è¶…å•†ç¹³è²»å¹³å°è¢å¹•ä¸Š
+	 * @param Desc_3 : äº¤æ˜“æè¿°3ï¼Œæœƒå‡ºç¾åœ¨è¶…å•†ç¹³è²»å¹³å°è¢å¹•ä¸Š
+	 * @param Desc_4 : äº¤æ˜“æè¿°4ï¼Œæœƒå‡ºç¾åœ¨è¶…å•†ç¹³è²»å¹³å°è¢å¹•ä¸Š
+	 * @param StoreType : ä»˜æ¬¾å­é …ç›®ï¼Œè¶…å•†
 	 */
 	public OptionalCVS(String Desc_1, String Desc_2,String Desc_3,String Desc_4, STORETYPE StoreType){
 		this.Desc_1 = Desc_1;

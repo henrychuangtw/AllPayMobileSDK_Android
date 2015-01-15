@@ -1,4 +1,4 @@
-package com.allpay.tw.mobilesdk;
+﻿package com.allpay.tw.mobilesdk;
 
 import java.util.Collection;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.allpay.tw.mobilesdk;
+﻿package com.allpay.tw.mobilesdk;
 
 public class API_Credit extends API_Base {
 	public String MerchantID;
