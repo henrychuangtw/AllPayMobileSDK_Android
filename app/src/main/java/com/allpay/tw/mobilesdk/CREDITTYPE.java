@@ -1,19 +1,24 @@
 package com.allpay.tw.mobilesdk;
 
 public enum CREDITTYPE {
-	INSTALLMENT("installment"),
+    INSTALLMENT("installment"),
     PERIODAMOUNT("periodamount");
-    private CREDITTYPE(String name){
-    	this.setName(name);
+
+    private CREDITTYPE(String name) {
+        this.setName(name);
     }
+
     private String name;
+
     public String getName() {
-		return name;
-	}
-    public void setName(String name){
-    	this.name = name;
+        return name;
     }
-    public String toString(){
-    	return this.getName();
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String toString() {
+        return this.getName();
     }
 }
