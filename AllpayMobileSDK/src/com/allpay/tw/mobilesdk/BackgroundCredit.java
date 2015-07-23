@@ -1,4 +1,4 @@
-package com.allpay.tw.mobilesdk;
+﻿package com.allpay.tw.mobilesdk;
 
 import java.util.Map;
 
@@ -86,6 +86,18 @@ public class BackgroundCredit extends BackgroundBase {
 		this.InstallmentAmount = InstallmentAmount;
 		this.Redeem = Redeem;
 	}
+	public BackgroundCredit(String MerchantID, String PlatformID, String PlatformMemberNo, String PlatformChargeFee, String AppCode,String MerchantTradeNo, String MerchantTradeDate,
+			Integer TotalAmount, String TradeDesc, String ItemName,PAYMENTTYPE ChoosePayment, ENVIRONMENT Environment,
+			String CreditHolder, String PhoneNumber, String CardNumber, String CardValidYM, String CardCVV2,
+			Integer CreditInstallment, Integer  InstallmentAmount, boolean Redeem){
+		this(MerchantID, PlatformID, PlatformMemberNo, PlatformChargeFee, AppCode, MerchantTradeNo, MerchantTradeDate,
+				TotalAmount, TradeDesc, ItemName,ChoosePayment, Environment,
+				CreditHolder, PhoneNumber, CardNumber, CardValidYM, CardCVV2);
+		
+		this.CreditInstallment = CreditInstallment;
+		this.InstallmentAmount = InstallmentAmount;
+		this.Redeem = Redeem;
+	}
 	
 	public BackgroundCredit(String MerchantID, String PlatformID, String AppCode,String MerchantTradeNo, String MerchantTradeDate,
 					Integer TotalAmount, String TradeDesc, String ItemName,PAYMENTTYPE ChoosePayment, ENVIRONMENT Environment,
@@ -105,6 +117,24 @@ public class BackgroundCredit extends BackgroundBase {
 		super(MerchantID, AppCode, MerchantTradeNo, MerchantTradeDate, TotalAmount, TradeDesc, ItemName, ChoosePayment, Environment, PlatformID, PlatformChargeFee);
 		// TODO Auto-generated constructor stub		
 		
+		this.CreditHolder = CreditHolder;
+		this.PhoneNumber = PhoneNumber;
+		this.CardNumber = CardNumber;
+		this.CardValidYM = CardValidYM;
+		this.CardCVV2 = CardCVV2;
+	}
+
+	public BackgroundCredit(String MerchantID, String PlatformID, String PlatformMemberNo,
+			String PlatformChargeFee, String AppCode, String MerchantTradeNo,
+			String MerchantTradeDate, Integer TotalAmount, String TradeDesc,
+			String ItemName, PAYMENTTYPE ChoosePayment,
+			ENVIRONMENT Environment, String CreditHolder, String PhoneNumber,
+			String CardNumber, String CardValidYM, String CardCVV2) {
+		super(MerchantID, AppCode, MerchantTradeNo, MerchantTradeDate,
+				TotalAmount, TradeDesc, ItemName, ChoosePayment, Environment,
+				PlatformID, PlatformChargeFee, PlatformMemberNo);
+		// TODO Auto-generated constructor stub
+
 		this.CreditHolder = CreditHolder;
 		this.PhoneNumber = PhoneNumber;
 		this.CardNumber = CardNumber;

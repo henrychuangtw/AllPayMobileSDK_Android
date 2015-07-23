@@ -1,4 +1,4 @@
-package com.allpay.tw.mobilesdk;
+﻿package com.allpay.tw.mobilesdk;
 
 import java.util.Map;
 
@@ -112,6 +112,16 @@ public class BackgroundCVS extends BackgroundBase {
 			String TradeDesc, String ItemName, PAYMENTTYPE ChoosePayment, ENVIRONMENT Environment, STORETYPE StoreType,
 			String Desc_1, String Desc_2, String Desc_3, String Desc_4){
 		super(MerchantID, AppCode, MerchantTradeNo, MerchantTradeDate, TotalAmount, TradeDesc, ItemName, ChoosePayment, Environment, PlatformID, PlatformChargeFee);
+		this.StoreType = StoreType;
+		this.Desc_1 = Desc_1;
+		this.Desc_2 = Desc_2;
+		this.Desc_3 = Desc_3;
+		this.Desc_4 = Desc_4;
+	}
+	public BackgroundCVS(String MerchantID, String PlatformID, String PlatformMemberNo, String PlatformChargeFee, String AppCode, String MerchantTradeNo, String MerchantTradeDate, Integer TotalAmount,
+			String TradeDesc, String ItemName, PAYMENTTYPE ChoosePayment, ENVIRONMENT Environment, STORETYPE StoreType,
+			String Desc_1, String Desc_2, String Desc_3, String Desc_4){
+		super(MerchantID, AppCode, MerchantTradeNo, MerchantTradeDate, TotalAmount, TradeDesc, ItemName, ChoosePayment, Environment, PlatformID, PlatformChargeFee, PlatformMemberNo);
 		this.StoreType = StoreType;
 		this.Desc_1 = Desc_1;
 		this.Desc_2 = Desc_2;

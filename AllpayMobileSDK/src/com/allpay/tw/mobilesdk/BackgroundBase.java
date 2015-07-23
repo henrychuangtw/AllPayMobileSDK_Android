@@ -1,4 +1,4 @@
-package com.allpay.tw.mobilesdk;
+﻿package com.allpay.tw.mobilesdk;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +15,7 @@ public class BackgroundBase {
 	private ENVIRONMENT Environment;
 	private String PlatformID;
 	private String PlatformChargeFee;
+	private String PlatformMemberNo;
 	
 	
 	public void setMerchantID(String MerchantID) { this.MerchantID = MerchantID; }
@@ -50,6 +51,18 @@ public class BackgroundBase {
 	public void setPlatformChargeFee(String PlatformChargeFee) { this.PlatformChargeFee = PlatformChargeFee; }
 	public String getPlatformChargeFee() { return this.PlatformChargeFee; }
 	
+	public void setPlatformMemberNo(String PlatformMemberNo) { this.PlatformMemberNo = PlatformMemberNo; }
+	public String getPlatformMemberNo() { return this.PlatformMemberNo; }
+	
+	
+	public BackgroundBase(String MerchantID, String AppCode, String MerchantTradeNo, String MerchantTradeDate, Integer TotalAmount, 
+			String TradeDesc, String ItemName, PAYMENTTYPE ChoosePayment, ENVIRONMENT Environment, 
+			String PlatformID, String PlatformChargeFee, String PlatformMemberNo){
+		this(MerchantID, AppCode, MerchantTradeNo, MerchantTradeDate, TotalAmount, TradeDesc, ItemName, ChoosePayment, Environment);
+		this.PlatformID = PlatformID;
+		this.PlatformChargeFee = PlatformChargeFee;
+		this.PlatformMemberNo = PlatformMemberNo;
+	}
 	public BackgroundBase(String MerchantID, String AppCode, String MerchantTradeNo, String MerchantTradeDate, Integer TotalAmount, 
 			String TradeDesc, String ItemName, PAYMENTTYPE ChoosePayment, ENVIRONMENT Environment, String PlatformID, String PlatformChargeFee){
 		this(MerchantID, AppCode, MerchantTradeNo, MerchantTradeDate, TotalAmount, TradeDesc, ItemName, ChoosePayment, Environment);
@@ -90,6 +103,9 @@ public class BackgroundBase {
 		
 		if(this.PlatformChargeFee != null && this.PlatformChargeFee.length() > 0)
 			mapParams.put("PlatformChargeFee", this.PlatformChargeFee);
+		
+		if(this.PlatformMemberNo != null && this.PlatformMemberNo.length() > 0)
+			mapParams.put("PlatformMemberNo", this.PlatformMemberNo);
 		
 		return mapParams;
 	}

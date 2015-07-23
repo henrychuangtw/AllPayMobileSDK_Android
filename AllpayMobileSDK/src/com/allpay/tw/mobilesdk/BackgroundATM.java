@@ -1,4 +1,4 @@
-package com.allpay.tw.mobilesdk;
+﻿package com.allpay.tw.mobilesdk;
 
 import java.util.Map;
 
@@ -40,6 +40,12 @@ public class BackgroundATM extends BackgroundBase {
 		this(MerchantID, PlatformID, PlatformChargeFee, AppCode, MerchantTradeNo, MerchantTradeDate, TotalAmount, TradeDesc
 				, ItemName,  ChoosePayment, Environment, BankName, 0);
 	}
+	public BackgroundATM(String MerchantID, String PlatformID, String PlatformMemberNo, String PlatformChargeFee, String AppCode, String MerchantTradeNo, String MerchantTradeDate, Integer TotalAmount, 
+			String TradeDesc, String ItemName, PAYMENTTYPE ChoosePayment, ENVIRONMENT Environment, 
+			BANKNAME BankName){
+		this(MerchantID, PlatformID, PlatformMemberNo, PlatformChargeFee, AppCode, MerchantTradeNo, MerchantTradeDate, TotalAmount, TradeDesc
+				, ItemName,  ChoosePayment, Environment, BankName, 0);
+	}
 	public BackgroundATM(String MerchantID, String PlatformID, String AppCode, String MerchantTradeNo, String MerchantTradeDate, Integer TotalAmount, 
 			String TradeDesc, String ItemName, PAYMENTTYPE ChoosePayment, ENVIRONMENT Environment, 
 			BANKNAME BankName, Integer ExpireDate){
@@ -51,6 +57,13 @@ public class BackgroundATM extends BackgroundBase {
 			String TradeDesc, String ItemName, PAYMENTTYPE ChoosePayment, ENVIRONMENT Environment, 
 			BANKNAME BankName, Integer ExpireDate){
 		super(MerchantID, AppCode, MerchantTradeNo, MerchantTradeDate, TotalAmount, TradeDesc, ItemName, ChoosePayment, Environment, PlatformID, PlatformChargeFee);
+		this.BankName = BankName;
+		this.ExpireDate = ExpireDate;
+	}
+	public BackgroundATM(String MerchantID, String PlatformID, String PlatformMemberNo, String PlatformChargeFee, String AppCode, String MerchantTradeNo, String MerchantTradeDate, Integer TotalAmount, 
+			String TradeDesc, String ItemName, PAYMENTTYPE ChoosePayment, ENVIRONMENT Environment, 
+			BANKNAME BankName, Integer ExpireDate){
+		super(MerchantID, AppCode, MerchantTradeNo, MerchantTradeDate, TotalAmount, TradeDesc, ItemName, ChoosePayment, Environment, PlatformID, PlatformChargeFee, PlatformMemberNo);
 		this.BankName = BankName;
 		this.ExpireDate = ExpireDate;
 	}

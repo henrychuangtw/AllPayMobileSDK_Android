@@ -1,4 +1,4 @@
-package com.allpay.tw.mobilesdk;
+ï»¿package com.allpay.tw.mobilesdk;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -28,8 +28,8 @@ public class OptionalCreditPeriodAmount implements Parcelable {
 	
 	
 	/**
-	 * ¿ï¾Ü©Ê°Ñ¼Æ¡A«H¥Î¥d©w´Á©wÃB
-	 * ·íChoosePayment°Ñ¼Æ¬°Credit®É±a¤J¡A¤£¥i»P«H¥Î¥d¤À´Á¤@°_³]©w
+	 * é¸æ“‡æ€§åƒæ•¸ï¼Œä¿¡ç”¨å¡å®šæœŸå®šé¡
+	 * ç•¶ChoosePaymentåƒæ•¸ç‚ºCreditæ™‚å¸¶å…¥ï¼Œä¸å¯èˆ‡ä¿¡ç”¨å¡åˆ†æœŸä¸€èµ·è¨­å®š
 	 * @param PeriodAmount
 	 * @param PeriodType
 	 * @param Frequency

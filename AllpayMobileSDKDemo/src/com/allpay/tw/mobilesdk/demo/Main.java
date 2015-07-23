@@ -1,4 +1,4 @@
-package com.allpay.tw.mobilesdk.demo;
+ï»¿package com.allpay.tw.mobilesdk.demo;
 
 
 import com.allpay.tw.mobilesdk.BANKNAME;
@@ -32,7 +32,7 @@ public class Main extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		setTitle("­q³æ²£¥Í(¹õ«e)");
+		setTitle("è¨‚å–®ç”¢ç”Ÿ(å¹•å‰)");
 		
 		btnAll = (Button)findViewById(R.id.btnAll);
 		btnATM = (Button)findViewById(R.id.btnATM);
@@ -73,88 +73,103 @@ public class Main extends Activity {
 				paymentType = PAYMENTTYPE.ALL;				
 				
 			}else if(iBtnID == R.id.btnATM){
-				//¦Û°ÊÂd­û¾÷(ATM)
+				//è‡ªå‹•æ«ƒå“¡æ©Ÿ(ATM)
 				paymentType = PAYMENTTYPE.ATM;
 				
-				//¿ï¾Ü©Ê°Ñ¼Æ¡A¤¹³\Ãº¶O¦³®Ä¤Ñ¼Æ(1~60)
+				//é¸æ“‡æ€§åƒæ•¸ï¼Œå…è¨±ç¹³è²»æœ‰æ•ˆå¤©æ•¸(1~60)
 //				OptionalATM oOptionalATM = new OptionalATM(7);
 				OptionalATM oOptionalATM = new OptionalATM(7, BANKNAME.parse2BankName(spnATM.getSelectedItem().toString()));
 				intent.putExtra(PaymentActivity.EXTRA_OPTIONAL, oOptionalATM);	
 				
 			}else if(iBtnID == R.id.btnCVS){
-				//¶W°Ó¥N½X(CVS)
+				//è¶…å•†ä»£ç¢¼(CVS)
 				paymentType = PAYMENTTYPE.CVS;
 				
-				//¿ï¾Ü©Ê°Ñ¼Æ¡A¥æ©ö´y­z1~4¡A·|¥X²{¦b¶W°ÓÃº¶O¥­¥x¿Ã¹õ¤W
-//				OptionalCVS oOptionalCVS = new OptionalCVS("´ú¸Õ1", "´ú¸Õ2", "", "", null);
-				OptionalCVS oOptionalCVS = new OptionalCVS("´ú¸Õ1", "´ú¸Õ2", "", "", STORETYPE.parse2StoreType(spnCVS.getSelectedItem().toString()));
+				//é¸æ“‡æ€§åƒæ•¸ï¼Œäº¤æ˜“æè¿°1~4ï¼Œæœƒå‡ºç¾åœ¨è¶…å•†ç¹³è²»å¹³å°è¢å¹•ä¸Š
+//				OptionalCVS oOptionalCVS = new OptionalCVS("æ¸¬è©¦1", "æ¸¬è©¦2", "", "", null);
+				OptionalCVS oOptionalCVS = new OptionalCVS("æ¸¬è©¦1", "æ¸¬è©¦2", "", "", STORETYPE.parse2StoreType(spnCVS.getSelectedItem().toString()));
 				intent.putExtra(PaymentActivity.EXTRA_OPTIONAL, oOptionalCVS);
 				
 			}else if(iBtnID == R.id.btnCredit){	
-				//«H¥Î¥d			
+				//ä¿¡ç”¨å¡			
 				paymentType = PAYMENTTYPE.CREDIT;
 				
 			}else if(iBtnID == R.id.btnCreditInstallment){	
-				//«H¥Î¥d(¤À´Á)
+				//ä¿¡ç”¨å¡(åˆ†æœŸ)
 				paymentType = PAYMENTTYPE.CREDIT;
 				intent.putExtra(PaymentActivity.EXTRA_OPTIONAL_CREDITTYPE, CREDITTYPE.INSTALLMENT);
 				
-				OptionalCreditInstallment oCreditInstallment = new OptionalCreditInstallment(3,			//¤À´Á´Á¼Æ 
-																							 0, 		//¤À´Áªº¥I´Úª÷ÃB
-																							 false, 	//¬O§_¨Ï¥Î¬õ§Q§é©è
-																							 false);	//¬O§_¬°»ÈÁp¥d¥æ©ö(»İ¦V¼Ú¥IÄ_´£¥X¥Ó½Ğ¡A¤~¯à¨Ï¥Î)
+				OptionalCreditInstallment oCreditInstallment = new OptionalCreditInstallment(3,			//åˆ†æœŸæœŸæ•¸ 
+																							 0, 		//åˆ†æœŸçš„ä»˜æ¬¾é‡‘é¡
+																							 false, 	//æ˜¯å¦ä½¿ç”¨ç´…åˆ©æŠ˜æŠµ
+																							 false);	//æ˜¯å¦ç‚ºéŠ€è¯å¡äº¤æ˜“(éœ€å‘æ­ä»˜å¯¶æå‡ºç”³è«‹ï¼Œæ‰èƒ½ä½¿ç”¨)
 				intent.putExtra(PaymentActivity.EXTRA_OPTIONAL, oCreditInstallment);
 			}else if(iBtnID == R.id.btnCreditPeriodAmount){
-				//«H¥Î¥d(©w´Á©wÃB)
+				//ä¿¡ç”¨å¡(å®šæœŸå®šé¡)
 				paymentType = PAYMENTTYPE.CREDIT;
 				intent.putExtra(PaymentActivity.EXTRA_OPTIONAL_CREDITTYPE, CREDITTYPE.PERIODAMOUNT);
 				
-				//EX:¨C­Ó¤ë¦©1¦¸100¤¸¡AÁ`¦@­n¦©12¦¸
-				OptionalCreditPeriodAmount oPeriodAmount = new OptionalCreditPeriodAmount(Config.TotalAmount_test,	//¨C¦¸±ÂÅvª÷ÃB(·í¦¹°Ñ¼Æ¦³³]©wª÷ÃB¡A»İ»PTotalAmount¬Û¦P) 
-																						  PERIODTYPE.MONTH, 		//¶g´ÁºØÃş
-																						  1, 						//°õ¦æÀW²v
-																						  12);						//°õ¦æ¤Ñ¼Æ
+				//EX:æ¯å€‹æœˆæ‰£1æ¬¡100å…ƒï¼Œç¸½å…±è¦æ‰£12æ¬¡
+				OptionalCreditPeriodAmount oPeriodAmount = new OptionalCreditPeriodAmount(Config.TotalAmount_test,	//æ¯æ¬¡æˆæ¬Šé‡‘é¡(ç•¶æ­¤åƒæ•¸æœ‰è¨­å®šé‡‘é¡ï¼Œéœ€èˆ‡TotalAmountç›¸åŒ) 
+																						  PERIODTYPE.MONTH, 		//é€±æœŸç¨®é¡
+																						  1, 						//åŸ·è¡Œé »ç‡
+																						  12);						//åŸ·è¡Œå¤©æ•¸
 				intent.putExtra(PaymentActivity.EXTRA_OPTIONAL, oPeriodAmount);
 			}
 			
-			//************** ¨SPlatformID ******************
-//			CreateTrade oCreateTrade = new CreateTrade(
-//					Config.MerchantID_test,				//¼t°Ó½s¸¹ 
-//					Config.AppCode_test, 				//App¥N½X
-//					Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-//					Config.getMerchantTradeDate(), 		//¼t°Ó¥æ©ö®É¶¡
-//					Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-//					Config.TradeDesc_test, 				//¥æ©ö´y­z
-//					Config.ItemName_test, 				//°Ó«~¦WºÙ
-//					paymentType, 						//¹w³]¥I´Ú¤è¦¡
-//					ENVIRONMENT.STAGE);					//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
-			
-//			//************** ¦³PlatformID ******************
-//			CreateTrade oCreateTrade = new CreateTrade(
-//					Config.MerchantID_test,				//¼t°Ó½s¸¹ 
-//					Config.PlatformID_test,				//¯S¬ù¦X§@¥­¥x°Ó¥N¸¹
-//					Config.AppCode_PlatformID_test, 	//App¥N½X
-//					Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-//					Config.getMerchantTradeDate(), 		//¼t°Ó¥æ©ö®É¶¡
-//					Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-//					Config.TradeDesc_test, 				//¥æ©ö´y­z
-//					Config.ItemName_test, 				//°Ó«~¦WºÙ
-//					paymentType, 						//¹w³]¥I´Ú¤è¦¡
-//					ENVIRONMENT.STAGE);					//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
-			
-			//************** ¦³PlatformID¡B¤âÄò¶O ******************
+			//************** æ²’PlatformID ******************
 			CreateTrade oCreateTrade = new CreateTrade(
-					Config.MerchantID_test,				//¼t°Ó½s¸¹ 
-					Config.PlatformID_test,				//¯S¬ù¦X§@¥­¥x°Ó¥N¸¹
-					Config.PlatformChargeFee_test,		//¯S¬ù¦X§@¥­¥x°Ó¤âÄò¶O
-					Config.AppCode_PlatformID_test, 	//App¥N½X
-					Config.getMerchantTradeNo(), 		//¼t°Ó¥æ©ö½s¸¹
-					Config.getMerchantTradeDate(), 		//¼t°Ó¥æ©ö®É¶¡
-					Config.TotalAmount_test, 			//¥æ©öª÷ÃB
-					Config.TradeDesc_test, 				//¥æ©ö´y­z
-					Config.ItemName_test, 				//°Ó«~¦WºÙ
-					paymentType, 						//¹w³]¥I´Ú¤è¦¡
-					ENVIRONMENT.STAGE);					//¤¶±µÀô¹Ò : STAGE¬°´ú¸Õ¡AOFFICIAL¬°¥¿¦¡
+					Config.MerchantID_test,				//å» å•†ç·¨è™Ÿ 
+					Config.AppCode_test, 				//Appä»£ç¢¼
+					Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+					Config.getMerchantTradeDate(), 		//å» å•†äº¤æ˜“æ™‚é–“
+					Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+					Config.TradeDesc_test, 				//äº¤æ˜“æè¿°
+					Config.ItemName_test, 				//å•†å“åç¨±
+					paymentType, 						//é è¨­ä»˜æ¬¾æ–¹å¼
+					ENVIRONMENT.STAGE);				//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+			
+//			//************** æœ‰PlatformID ******************
+//			CreateTrade oCreateTrade = new CreateTrade(
+//					Config.MerchantID_test,				//å» å•†ç·¨è™Ÿ 
+//					Config.PlatformID_test,				//ç‰¹ç´„åˆä½œå¹³å°å•†ä»£è™Ÿ
+//					Config.AppCode_PlatformID_test, 	//Appä»£ç¢¼
+//					Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+//					Config.getMerchantTradeDate(), 		//å» å•†äº¤æ˜“æ™‚é–“
+//					Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+//					Config.TradeDesc_test, 				//äº¤æ˜“æè¿°
+//					Config.ItemName_test, 				//å•†å“åç¨±
+//					paymentType, 						//é è¨­ä»˜æ¬¾æ–¹å¼
+//					ENVIRONMENT.STAGE);					//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+			
+//			//************** æœ‰PlatformIDã€æ‰‹çºŒè²» ******************
+//			CreateTrade oCreateTrade = new CreateTrade(
+//					Config.MerchantID_test,				//å» å•†ç·¨è™Ÿ 
+//					Config.PlatformID_test,				//ç‰¹ç´„åˆä½œå¹³å°å•†ä»£è™Ÿ
+//					Config.PlatformChargeFee_test,		//ç‰¹ç´„åˆä½œå¹³å°å•†æ‰‹çºŒè²»
+//					Config.AppCode_PlatformID_test, 	//Appä»£ç¢¼
+//					Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+//					Config.getMerchantTradeDate(), 		//å» å•†äº¤æ˜“æ™‚é–“
+//					Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+//					Config.TradeDesc_test, 				//äº¤æ˜“æè¿°
+//					Config.ItemName_test, 				//å•†å“åç¨±
+//					paymentType, 						//é è¨­ä»˜æ¬¾æ–¹å¼
+//					ENVIRONMENT.STAGE);					//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
+			
+			//************** æœ‰PlatformIDã€æ‰‹çºŒè²»ã€å¹³å°å•†æœƒå“¡ç·¨è™Ÿ ******************
+//			CreateTrade oCreateTrade = new CreateTrade(
+//					Config.MerchantID_test,				//å» å•†ç·¨è™Ÿ 
+//					Config.PlatformID_test,				//ç‰¹ç´„åˆä½œå¹³å°å•†ä»£è™Ÿ
+//					Config.PlatformMemberNo_test,		//ç‰¹ç´„åˆä½œå¹³å°å•†æœƒå“¡ç·¨è™Ÿ
+//					Config.PlatformChargeFee_test,		//ç‰¹ç´„åˆä½œå¹³å°å•†æ‰‹çºŒè²»ï¼Œè‹¥ç„¡æ‰‹çºŒè²»å‰‡å¸¶0
+//					Config.AppCode_PlatformID_test, 	//Appä»£ç¢¼
+//					Config.getMerchantTradeNo(), 		//å» å•†äº¤æ˜“ç·¨è™Ÿ
+//					Config.getMerchantTradeDate(), 		//å» å•†äº¤æ˜“æ™‚é–“
+//					Config.TotalAmount_test, 			//äº¤æ˜“é‡‘é¡
+//					Config.TradeDesc_test, 				//äº¤æ˜“æè¿°
+//					Config.ItemName_test, 				//å•†å“åç¨±
+//					paymentType, 						//é è¨­ä»˜æ¬¾æ–¹å¼
+//					ENVIRONMENT.STAGE);					//ä»‹æ¥ç’°å¢ƒ : STAGEç‚ºæ¸¬è©¦ï¼ŒOFFICIALç‚ºæ­£å¼
 								
 			
 			intent.putExtra(PaymentActivity.EXTRA_PAYMENT, oCreateTrade);

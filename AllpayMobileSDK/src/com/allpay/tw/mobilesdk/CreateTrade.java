@@ -1,4 +1,4 @@
-package com.allpay.tw.mobilesdk;
+ï»¿package com.allpay.tw.mobilesdk;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -9,6 +9,7 @@ import android.os.Parcelable;
 public class CreateTrade implements Parcelable {
 	private String MerchantID;
 	private String PlatformID;
+	private String PlatformMemberNo;
 	private String PlatformChargeFee;
 	private String AppCode;
 	private String MerchantTradeNo;
@@ -25,6 +26,9 @@ public class CreateTrade implements Parcelable {
 	
 	public void setPlatformID(String PlatformID) { this.PlatformID = PlatformID; }
 	public String getPlatformID() { return this.PlatformID; }
+	
+	public void setPlatformMemberNo(String PlatformMemberNo) { this.PlatformMemberNo = PlatformMemberNo; }
+	public String getPlatformMemberNo() { return this.PlatformMemberNo; }
 	
 	public void setPlatformChargeFee(String PlatformChargeFee) { this.PlatformChargeFee = PlatformChargeFee; }
 	public String getPlatformChargeFee() { return this.PlatformChargeFee; }
@@ -55,17 +59,17 @@ public class CreateTrade implements Parcelable {
 		
 	
 	/**
-	 * ­q³æ²£¥Í(¹õ«e)
-	 * @param MerchantID : ¼t°Ó½s¸¹
-	 * @param PlatformID : ¯S¬ù¦X§@¥­¥x°Ó¥N¸¹
-	 * @param AppCode : App¥N½X
-	 * @param MerchantTradeNo : ¼t°Ó¥æ©ö½s¸¹(¤£¥i­«½Æ)
-	 * @param MerchantTradeDate : ¼t°Ó¥æ©ö®É¶¡(®æ¦¡yyyy/MM/dd HH:mm:ss)
-	 * @param TotalAmount : ¥æ©öª÷ÃB
-	 * @param TradeDesc : ¥æ©ö´y­z
-	 * @param ItemName : °Ó«~¦WºÙ(¦p¦³¦hµ§¡A½Ð¥H#¸¹¤À¹j)
-	 * @param ChoosePayment : ¹w³]¥I´Ú¤è¦¡
-	 * @param Environment : ¶}µoÀô¹Ò	
+	 * è¨‚å–®ç”¢ç”Ÿ(å¹•å‰)
+	 * @param MerchantID : å» å•†ç·¨è™Ÿ
+	 * @param PlatformID : ç‰¹ç´„åˆä½œå¹³å°å•†ä»£è™Ÿ
+	 * @param AppCode : Appä»£ç¢¼
+	 * @param MerchantTradeNo : å» å•†äº¤æ˜“ç·¨è™Ÿ(ä¸å¯é‡è¤‡)
+	 * @param MerchantTradeDate : å» å•†äº¤æ˜“æ™‚é–“(æ ¼å¼yyyy/MM/dd HH:mm:ss)
+	 * @param TotalAmount : äº¤æ˜“é‡‘é¡
+	 * @param TradeDesc : äº¤æ˜“æè¿°
+	 * @param ItemName : å•†å“åç¨±(å¦‚æœ‰å¤šç­†ï¼Œè«‹ä»¥#è™Ÿåˆ†éš”)
+	 * @param ChoosePayment : é è¨­ä»˜æ¬¾æ–¹å¼
+	 * @param Environment : é–‹ç™¼ç’°å¢ƒ	
 	 */
 	public CreateTrade(String MerchantID, String PlatformID, String AppCode, String MerchantTradeNo, String MerchantTradeDate, Integer TotalAmount, 
 			String TradeDesc, String ItemName, PAYMENTTYPE ChoosePayment, ENVIRONMENT Environment){
@@ -74,18 +78,41 @@ public class CreateTrade implements Parcelable {
 		this.PlatformID = PlatformID;
 	}
 	/**
-	 * ­q³æ²£¥Í(¹õ«e)
-	 * @param MerchantID : ¼t°Ó½s¸¹
-	 * @param PlatformID : ¯S¬ù¦X§@¥­¥x°Ó¥N¸¹
-	 * @param PlatformChargeFee : ¯S¬ù¦X§@¥­¥x°Ó¤âÄò¶O
-	 * @param AppCode : App¥N½X
-	 * @param MerchantTradeNo : ¼t°Ó¥æ©ö½s¸¹(¤£¥i­«½Æ)
-	 * @param MerchantTradeDate : ¼t°Ó¥æ©ö®É¶¡(®æ¦¡yyyy/MM/dd HH:mm:ss)
-	 * @param TotalAmount : ¥æ©öª÷ÃB
-	 * @param TradeDesc : ¥æ©ö´y­z
-	 * @param ItemName : °Ó«~¦WºÙ(¦p¦³¦hµ§¡A½Ð¥H#¸¹¤À¹j)
-	 * @param ChoosePayment : ¹w³]¥I´Ú¤è¦¡
-	 * @param Environment : ¶}µoÀô¹Ò	
+	 * è¨‚å–®ç”¢ç”Ÿ(å¹•å‰)
+	 * @param MerchantID : å» å•†ç·¨è™Ÿ
+	 * @param PlatformID : ç‰¹ç´„åˆä½œå¹³å°å•†ä»£è™Ÿ
+	 * @param PlatformMemberNo : ç‰¹ç´„åˆä½œå¹³å°å•†æœƒå“¡ç·¨è™Ÿ
+	 * @param PlatformChargeFee : ç‰¹ç´„åˆä½œå¹³å°å•†æ‰‹çºŒè²»
+	 * @param AppCode : Appä»£ç¢¼
+	 * @param MerchantTradeNo : å» å•†äº¤æ˜“ç·¨è™Ÿ(ä¸å¯é‡è¤‡)
+	 * @param MerchantTradeDate : å» å•†äº¤æ˜“æ™‚é–“(æ ¼å¼yyyy/MM/dd HH:mm:ss)
+	 * @param TotalAmount : äº¤æ˜“é‡‘é¡
+	 * @param TradeDesc : äº¤æ˜“æè¿°
+	 * @param ItemName : å•†å“åç¨±(å¦‚æœ‰å¤šç­†ï¼Œè«‹ä»¥#è™Ÿåˆ†éš”)
+	 * @param ChoosePayment : é è¨­ä»˜æ¬¾æ–¹å¼
+	 * @param Environment : é–‹ç™¼ç’°å¢ƒ	
+	 */
+	public CreateTrade(String MerchantID, String PlatformID, String PlatformMemberNo, String PlatformChargeFee, String AppCode, String MerchantTradeNo, String MerchantTradeDate, Integer TotalAmount, 
+			String TradeDesc, String ItemName, PAYMENTTYPE ChoosePayment, ENVIRONMENT Environment){
+		
+		this(MerchantID, AppCode, MerchantTradeNo, MerchantTradeDate, TotalAmount, TradeDesc, ItemName, ChoosePayment, Environment);
+		this.PlatformID = PlatformID;
+		this.PlatformChargeFee = PlatformChargeFee;
+		this.PlatformMemberNo = PlatformMemberNo;
+	}
+	/**
+	 * è¨‚å–®ç”¢ç”Ÿ(å¹•å‰)
+	 * @param MerchantID : å» å•†ç·¨è™Ÿ
+	 * @param PlatformID : ç‰¹ç´„åˆä½œå¹³å°å•†ä»£è™Ÿ
+	 * @param PlatformChargeFee : ç‰¹ç´„åˆä½œå¹³å°å•†æ‰‹çºŒè²»
+	 * @param AppCode : Appä»£ç¢¼
+	 * @param MerchantTradeNo : å» å•†äº¤æ˜“ç·¨è™Ÿ(ä¸å¯é‡è¤‡)
+	 * @param MerchantTradeDate : å» å•†äº¤æ˜“æ™‚é–“(æ ¼å¼yyyy/MM/dd HH:mm:ss)
+	 * @param TotalAmount : äº¤æ˜“é‡‘é¡
+	 * @param TradeDesc : äº¤æ˜“æè¿°
+	 * @param ItemName : å•†å“åç¨±(å¦‚æœ‰å¤šç­†ï¼Œè«‹ä»¥#è™Ÿåˆ†éš”)
+	 * @param ChoosePayment : é è¨­ä»˜æ¬¾æ–¹å¼
+	 * @param Environment : é–‹ç™¼ç’°å¢ƒ	
 	 */
 	public CreateTrade(String MerchantID, String PlatformID, String PlatformChargeFee, String AppCode, String MerchantTradeNo, String MerchantTradeDate, Integer TotalAmount, 
 			String TradeDesc, String ItemName, PAYMENTTYPE ChoosePayment, ENVIRONMENT Environment){
@@ -95,16 +122,16 @@ public class CreateTrade implements Parcelable {
 		this.PlatformChargeFee = PlatformChargeFee;
 	}
 	/**
-	 * ­q³æ²£¥Í(¹õ«e)
-	 * @param MerchantID : ¼t°Ó½s¸¹
-	 * @param AppCode : App¥N½X
-	 * @param MerchantTradeNo : ¼t°Ó¥æ©ö½s¸¹(¤£¥i­«½Æ)
-	 * @param MerchantTradeDate : ¼t°Ó¥æ©ö®É¶¡(®æ¦¡yyyy/MM/dd HH:mm:ss)
-	 * @param TotalAmount : ¥æ©öª÷ÃB
-	 * @param TradeDesc : ¥æ©ö´y­z
-	 * @param ItemName : °Ó«~¦WºÙ(¦p¦³¦hµ§¡A½Ð¥H#¸¹¤À¹j)
-	 * @param ChoosePayment : ¹w³]¥I´Ú¤è¦¡
-	 * @param Environment : ¶}µoÀô¹Ò
+	 * è¨‚å–®ç”¢ç”Ÿ(å¹•å‰)
+	 * @param MerchantID : å» å•†ç·¨è™Ÿ
+	 * @param AppCode : Appä»£ç¢¼
+	 * @param MerchantTradeNo : å» å•†äº¤æ˜“ç·¨è™Ÿ(ä¸å¯é‡è¤‡)
+	 * @param MerchantTradeDate : å» å•†äº¤æ˜“æ™‚é–“(æ ¼å¼yyyy/MM/dd HH:mm:ss)
+	 * @param TotalAmount : äº¤æ˜“é‡‘é¡
+	 * @param TradeDesc : äº¤æ˜“æè¿°
+	 * @param ItemName : å•†å“åç¨±(å¦‚æœ‰å¤šç­†ï¼Œè«‹ä»¥#è™Ÿåˆ†éš”)
+	 * @param ChoosePayment : é è¨­ä»˜æ¬¾æ–¹å¼
+	 * @param Environment : é–‹ç™¼ç’°å¢ƒ
 	 */
 	public CreateTrade(String MerchantID, String AppCode, String MerchantTradeNo, String MerchantTradeDate, 
 					Integer TotalAmount, String TradeDesc, String ItemName, PAYMENTTYPE ChoosePayment, ENVIRONMENT Environment){		
@@ -138,6 +165,9 @@ public class CreateTrade implements Parcelable {
 		if(this.PlatformChargeFee != null && this.PlatformChargeFee.length() > 0)
 			mapParams.put("PlatformChargeFee", String.valueOf(this.PlatformChargeFee));
 		
+		if(this.PlatformMemberNo != null && this.PlatformMemberNo.length() > 0)
+			mapParams.put("PlatformMemberNo", String.valueOf(this.PlatformMemberNo));
+		
 		return mapParams.entrySet();
 	}
 	
@@ -157,6 +187,7 @@ public class CreateTrade implements Parcelable {
 			CreateTrade obj = new CreateTrade();
 			obj.setMerchantID(source.readString());
 			obj.setPlatformID(source.readString());
+			obj.setPlatformMemberNo(source.readString());
 			obj.setPlatformChargeFee(source.readString());
 			obj.setAppCode(source.readString());
 			obj.setMerchantTradeNo(source.readString());
@@ -223,6 +254,7 @@ public class CreateTrade implements Parcelable {
 		// TODO Auto-generated method stub
 		dest.writeString(MerchantID);
 		dest.writeString(PlatformID);
+		dest.writeString(PlatformMemberNo);
 		dest.writeString(PlatformChargeFee);
 		dest.writeString(AppCode);
 		dest.writeString(MerchantTradeNo);

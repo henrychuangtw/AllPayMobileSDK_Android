@@ -1,4 +1,4 @@
-package com.allpay.tw.mobilesdk.demo;
+ï»¿package com.allpay.tw.mobilesdk.demo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,12 +14,13 @@ public class Config {
 	
 	public static String MerchantID_test = "2000031";
 	public static String PlatformID_test = "1000139";
+	public static String PlatformMemberNo_test = "222222"; 
 	public static String PlatformChargeFee_test = "1";
 	public static String AppCode_test = "test_1234";
 	public static String AppCode_PlatformID_test = "test_abcd";
 	public static int TotalAmount_test = 100;
-	public static String TradeDesc_test = "Allpay°Ó«°ÁÊª«";
-	public static String ItemName_test = "¤â¾÷20¤¸X2#ÀH¨­ºÐ60¤¸X1";
+	public static String TradeDesc_test = "Allpayå•†åŸŽè³¼ç‰©";
+	public static String ItemName_test = "æ‰‹æ©Ÿ20å…ƒX2#éš¨èº«ç¢Ÿ60å…ƒX1";
 	
 	public static ArrayList<BANKNAME> lstBankName = new ArrayList<BANKNAME>(Arrays.asList(BANKNAME.TAISHIN, BANKNAME.HUANAN, BANKNAME.ESUN, BANKNAME.FUBON, BANKNAME.BOT, BANKNAME.CHINATRUST, BANKNAME.FIRST, BANKNAME.ESUN_Counter));
 	public static ArrayList<STORETYPE> lstStoreType = new ArrayList<STORETYPE>(Arrays.asList(STORETYPE.CVS, STORETYPE.IBON));
