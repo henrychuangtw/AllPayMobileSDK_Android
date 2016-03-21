@@ -114,6 +114,21 @@ public void onAllpayBackgroundTaskCompleted(API_Base oApi_Base) {
 
 
 
+Proguard設定
+```Java
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep public class com.google.gson.**
+-keep class sun.misc.Unsafe { *; }
+-keep class com.google.gson.stream.** { *; }
+-keep class com.google.gson.examples.android.model.** { *; }
+-keep public class com.allpay.tw.mobilesdk.** { *; }
+```
+
+
+
+
+
 License
 ----
 
