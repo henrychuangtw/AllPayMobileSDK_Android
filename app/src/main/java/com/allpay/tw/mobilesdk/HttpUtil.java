@@ -41,7 +41,7 @@ class HttpUtil {
     private static final int DEFAULT_CONNECT_TIMEOUT_MILLIS = 10 * 1000;
 
     // Timeout (ms) for read operations on connections.
-    private static final int DEFAULT_READ_TIMEOUT_MILLIS = 10 * 1000;
+    private static final int DEFAULT_READ_TIMEOUT_MILLIS = 60 * 1000;
 
     // Timeout (ms) for obtaining a connection from the connection pool.
     private static final int DEFAULT_GET_CONNECTION_FROM_POOL_TIMEOUT_MILLIS = 10 * 1000;
