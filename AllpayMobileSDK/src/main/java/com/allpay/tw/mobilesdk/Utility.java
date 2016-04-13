@@ -9,7 +9,7 @@ import android.webkit.WebView;
 
 class Utility {
 	public static final String LOGTAG = "AllpayMobileSDK";
-	public static final String ClientOrder = "Mobile/CreateClientOrder";
+	public static final String ClientOrder = "Mobile/CreateClientOrder/V2";
 	public static final String ServerOrder = "Mobile/CreateServerOrder";
 	public static final String OTP = "Mobile/VerifyOtpCode";
 	
