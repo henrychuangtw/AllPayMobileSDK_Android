@@ -12,7 +12,12 @@ public class AllpayAsyncTask<BackgroundClass extends BackgroundBase,APIClass ext
 	private Context cxt;
 	private Class<APIClass> type;
 	 
-	
+    public AllpayAsyncTask(AllpayBackgroundTaskCompleted listener, Class<APIClass> type, Context context) {
+        this.listener = listener;
+        this.cxt = context;
+        this.type = type;
+    }
+
 	public AllpayAsyncTask(AllpayBackgroundTaskCompleted listener, Class<APIClass> type){
 	        this.listener = listener;
 	        this.cxt = (Context)listener;
