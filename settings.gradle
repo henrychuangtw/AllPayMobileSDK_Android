@@ -1,1 +1,1 @@
-include ':AllpayMobileSDKDemo', ':AllpayMobileSDK'
+include ':AllpayMobileSDK'
