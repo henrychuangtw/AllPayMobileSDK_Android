@@ -1,6 +1,9 @@
 package com.allpay.tw.mobilesdk;
 
 
+import android.content.Context;
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,13 +12,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.Map;
-import android.content.Context;
-import android.util.Log;
 
 
 class HttpUtil {
     private static final String TAG = Utility.LOGTAG;
-    private static int TIMEOUT_ReadTimeout = 15000;
+    private static int TIMEOUT_ReadTimeout = 60000;
     private static int TIMEOUT_ConnectTimeout = 15000;
 
     public static String post(String url, Map<String, String> params, Context cxt) throws Exception {
